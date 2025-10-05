@@ -7,6 +7,7 @@ const useCardStore = create<CartStoreStateType & CartStoreActionsType>() (
 
     (set) => ({
       cart: [],
+        hasHydrated: false, 
       addToCart: (product) =>
           set((state) => {
         const existingIndex = state.cart.findIndex((p) => 

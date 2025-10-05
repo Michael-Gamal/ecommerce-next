@@ -1,10 +1,9 @@
 import ProductInteraction from "@/app/components/ProductInteraction";
-import { ProductType } from "@/types"
+import { CartItemType } from "@/types"
 import Image from "next/image";
-import { describe } from "node:test";
 
 
-const Product: ProductType = {
+const Product: CartItemType = {
     id: 1,
     name: "Adidas CoreFit T-Shirt",
     shortDescription:

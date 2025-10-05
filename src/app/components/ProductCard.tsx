@@ -1,12 +1,12 @@
 'use client'
-import { ProductsType } from '@/types'
+import { ProductType } from '@/types'
 import { ShoppingCart } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import useCardStore from '../store/CardStore'
 import { toast } from 'react-toastify'
-const ProductCard = ({ product } : {product: ProductsType}) => {
+const ProductCard = ({ product } : {product: ProductType}) => {
   const [productType, setProductType] = useState({
     size: product.sizes[0],
     color: product.colors[0]
@@ -64,7 +64,7 @@ const ProductCard = ({ product } : {product: ProductsType}) => {
             </div>        
               {/* color */}
             <div className="flex flex-col gap-1">
-              <spna className="text-gray-500">Color</spna>
+              <span className="text-gray-500">Color</span>
               <div className="flex item-center gap-2">
                 {
                   product.colors.map((color) => (
