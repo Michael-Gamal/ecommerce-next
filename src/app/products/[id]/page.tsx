@@ -66,7 +66,7 @@ const page = async ({params,searchParams}:{params:Promise<{id:string}>;searchPar
                 <Image src="/stripe.png" alt="stripe Logo" width={50} height={25} className="rounded-md" />
             </div>
             <p className="text-gray-500 text-xs">
-                By cliking pay now, You agree our 
+                By cliking pay now, You agree our{" "}
                 <span className="underline hover:text-black">Terms and Conditions and Privacy Policy.</span>
                 our authorization us to selcted payment method for the total amount shown. All sales are subjuct to our return and 
                 <span className="underline hover:text-black">Refund Policies</span>
