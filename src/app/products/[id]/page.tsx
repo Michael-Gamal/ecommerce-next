@@ -39,8 +39,8 @@ export const generateMetadata = async ({
 
 const page = async ({params,searchParams}:{params:Promise<{id:string}>;searchParams:Promise<{color:string; size:string}>}) => {
   const {size,color} = await searchParams;
-  const selectedColor = color || Product.colors[0] as string;
-  const selectedSize = size || Product.sizes[0] as string;
+  const selectedColor = color || Product.colors[0] ;
+  const selectedSize = size || Product.sizes[0] ;
   
     return (
     <div className="flex flex-col gap-4 lg:flex-row md:gap-12 mt-12">
@@ -66,9 +66,9 @@ const page = async ({params,searchParams}:{params:Promise<{id:string}>;searchPar
                 <Image src="/stripe.png" alt="stripe Logo" width={50} height={25} className="rounded-md" />
             </div>
             <p className="text-gray-500 text-xs">
-                By cliking pay now, You agree our <span className="underline hover:text-black">
-                    Terms and Conditions and Privacy Policy
-                </span>. our authorization us to selcted payment method for the total amount shown. All sales are subjuct to our return and 
+                By cliking pay now, You agree our 
+                <span className="underline hover:text-black">Terms and Conditions and Privacy Policy.</span>
+                our authorization us to selcted payment method for the total amount shown. All sales are subjuct to our return and 
                 <span className="underline hover:text-black">Refund Policies</span>
             </p>
         </div>

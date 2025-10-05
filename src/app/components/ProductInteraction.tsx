@@ -34,9 +34,7 @@ const ProductInteraction = (
     if (type === "increment") {
       setQuantity(prev => prev + 1)
     }else {
-      if (quantity > 1 ) {
-        setQuantity((prev) => prev -1)
-      }
+      quantity > 1 && setQuantity((prev) => prev -1)
     }
   }
   const handleAddToCart = () => {
@@ -52,7 +50,7 @@ const ProductInteraction = (
         <span className="text-gray-500">Size</span>
         <div className="flex items-center gap-2">
           {product.sizes.map((size) => (
-            <div
+            <button
               key={size}
               onClick={() => handleTypeChange("size",size)}
               className={`cursor-pointer border-1 p-[2px] ${
@@ -69,7 +67,7 @@ const ProductInteraction = (
                 
                 `}>{size.toUpperCase()}</div>
 
-            </div>
+            </button>
           ))}
 
         </div>
@@ -80,7 +78,7 @@ const ProductInteraction = (
         <span className="text-gray-500">Size</span>
         <div className=" flex items-center gap-2">
           {product.colors.map((color) => (
-            <div
+            <button
               key={color}
               onClick={() => handleTypeChange("color",color)}
               className={`cursor-pointer border-1 p-[2px] ${
@@ -88,7 +86,7 @@ const ProductInteraction = (
               } cursor-pointer `}
             >
               <div className='w-6 h-6' style={{backgroundColor: color}}></div>
-            </div>
+            </button>
           ))}
 
         </div>

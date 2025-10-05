@@ -19,7 +19,7 @@ const CartPageInner = () => {
   const searchParams = useSearchParams()
   const router = useRouter()
   const [shippingFormat, setShippingForm] = useState<ShippingFormInputs>()
-  const activeStep = parseInt(searchParams.get("step") || "1")
+  const activeStep = Number.parseInt(searchParams.get("step") || "1")
   const { cart, removeFromCart } = useCardStore()
 
   return (

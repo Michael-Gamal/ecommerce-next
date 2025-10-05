@@ -11,7 +11,7 @@ const useCardStore = create<CartStoreStateType & CartStoreActionsType>() (
       addToCart: (product) =>
           set((state) => {
         const existingIndex = state.cart.findIndex((p) => 
-            p.id === p.id &&
+            p.id === product.id &&
             p.selectedColor === product.selectedColor &&
             p.selectedSize === product.selectedSize
           )
@@ -25,7 +25,7 @@ const useCardStore = create<CartStoreStateType & CartStoreActionsType>() (
           return {cart: [...state.cart, product]};
         }),
       removeFromCart:(product) => set((state) => ({cart: state.cart.filter((p) => !(
-        p.id === p.id && p.selectedColor === product.selectedColor && p.selectedSize === product.selectedSize ))
+        p.id === product.id && p.selectedColor === product.selectedColor && p.selectedSize === product.selectedSize ))
     })),
     clearCart: () => set(() => ({cart: []})),
     }),
