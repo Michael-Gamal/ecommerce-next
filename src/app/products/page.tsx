@@ -1,6 +1,6 @@
 import ProductList from "../components/ProductList"
 
-const page = async ({
+const Page = async ({
     searchParams
 }: {
     searchParams: Promise<{ category: string }>
@@ -13,4 +13,4 @@ const page = async ({
   )
 }
 
-export default page
+export default Page
